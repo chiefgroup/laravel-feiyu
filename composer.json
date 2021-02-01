@@ -1,0 +1,28 @@
+{
+    "name": "chiefgroup/laravel-feiyu",
+    "type": "library",
+    "license": "BSD 3-Clause License",
+    "authors": [
+        {
+            "name": "observer",
+            "email": "sxpd7788@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ChiefGroup\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "illuminate/container": "^6.0 || ^7.0 || ^8.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+            ],
+            "aliases": {
+            }
+        }
+    }
+}
