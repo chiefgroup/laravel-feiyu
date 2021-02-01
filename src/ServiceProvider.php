@@ -1,13 +1,13 @@
 <?php
 namespace ChiefGroup\LaravelFeiyu;
 
+use ChiefGroup\Feiyu\Feiyu;
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 
 /**
  * Class ServiceProvider.
  *
- * @author overtrue <i@overtrue.me>
  */
 class ServiceProvider extends LaravelServiceProvider implements DeferrableProvider
 {
@@ -18,17 +18,10 @@ class ServiceProvider extends LaravelServiceProvider implements DeferrableProvid
      */
     public function register()
     {
-        $this->app->singleton('cg-feiyu', function ($app) {});
-    }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return ['cg-feiyu'];
+        $this->app->singleton('cg.feiyu', function ($app) {
+            return new Feiyu();
+        });
+        $this->app->alias('cg.feiyu', Feiyu::class);
     }
 
 }
