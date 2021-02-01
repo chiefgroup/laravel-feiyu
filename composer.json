@@ -1,7 +1,7 @@
 {
     "name": "chiefgroup/laravel-feiyu",
     "type": "library",
-    "license": "BSD 3-Clause License",
+    "license": "MIT",
     "description": "",
     "authors": [
         {
