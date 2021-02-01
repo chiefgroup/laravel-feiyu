@@ -1,0 +1,32 @@
+{
+    "name": "chiefgroup/laravel-feiyu",
+    "type": "library",
+    "license": "BSD 3-Clause License",
+    "description": "",
+    "authors": [
+        {
+            "name": "observer",
+            "email": "sxpd7788@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ChiefGroup\\LaravelFeiyu": "src/"
+        }
+    },
+    "require": {
+        "chiefgroup/feiyu": "^1.0"
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ChiefGroup\\LaravelFeiyu\\ServiceProvider"
+            ],
+            "aliases": {
+                "CFFeiyu": "ChiefGroup\\LaravelFeiyu\\Facade"
+            }
+        }
+    },
+
+}
