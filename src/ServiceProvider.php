@@ -11,6 +11,13 @@ use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
  */
 class ServiceProvider extends LaravelServiceProvider implements DeferrableProvider
 {
+    public function boot()
+    {
+        $this->publishes([
+            __DIR__.'/config.php' => config_path('feiyu.php')
+        ], 'config');
+    }
+
     /**
      * Register services.
      *
