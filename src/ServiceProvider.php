@@ -26,7 +26,7 @@ class ServiceProvider extends LaravelServiceProvider implements DeferrableProvid
     public function register()
     {
         $this->app->singleton('cg.feiyu', function ($app) {
-            return new Feiyu();
+            return new Feiyu(config('feiyu') ?? []);
         });
     }
 
